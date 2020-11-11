@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Catch The Frogs</title>
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+        <meta name="viewport" content="width=device-width, initial-scale=0.8, user-scalable=no">
+        <link rel="icon" type="image/png" href="./images/frog.png">
+
+        <link rel="stylesheet" type="text/css" href="./css/fontawesome-all.css"/>
+        <link rel="stylesheet" href="./css/mystyle.css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Fredoka+One&display=swap" rel="stylesheet"/>
+
+        <script src="./js/jquery-3.5.1.min.js"></script>
+        <script src="./js/render.js"></script>
+        <script src="./js/main.js"></script>
+    </head>
+
+    <body>
+        <div id="grid-container">
+            <div id="game_header" class="display_center">
+                <i class="fas fa-frog fa-flip icon"></i>
+                <span>catch the frogs</span>
+                <i class="fas fa-frog fa-flip-horizontal icon"></i>
+            </div>
+
+            <div id="game_content" class="display_center">
+                <div id="instructions">[game instructions]<br>click the frogs to catch them before time out.<br><br><i class="fas fa-bullhorn"></i> game by: masterx <i class="fas fa-bullhorn fa-flip-horizontal"></i></div>
+                <div id="level_complete"><i class="far fa-thumbs-up"></i> level complete <i class="far fa-thumbs-up"></i></div> <!-- default hidden -->
+                <div id="game_over">Game Over !</div> <!-- default hidden -->
+            </div>
+
+            <div id="game_footer">
+                <div id="frogs" class="display_center"></div>
+                <button id="start" class="display_center"></button>
+                <div id="level" class="display_center"></div>
+            </div>
+        </div>
+    </body>
+</html>

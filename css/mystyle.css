@@ -1,0 +1,183 @@
+body
+{
+    background-color: #22a356;
+    user-select: none;
+    overflow: hidden;
+}
+
+html, body, #grid-container
+{
+    height: 100%;
+    margin: 0;
+}
+
+#game_header, #game_footer
+{
+    background-color: #28c466;
+}
+
+#grid-container
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr 10%;
+    grid-template-areas:
+    "game_header"
+    "game_content"
+    "game_footer";
+}
+
+.icon, #game_header
+{
+    color: #fefefe;
+}
+
+.icon, #start
+{
+    font-size: 143%;
+}
+
+.icon
+{
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+
+#game_header
+{
+    grid-area: game_header;
+    font-family: 'Luckiest Guy', cursive;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+    font-size: 152%;
+    border-bottom: 1px solid #4ee17a;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#game_content
+{
+    margin: 2px;
+    grid-area: game_content;
+}
+
+.fa-bullhorn
+{
+    font-size: 15px;
+}
+
+#game_footer
+{
+    display: grid;
+    grid-template-columns: 1.4fr 2fr 1.4fr;
+    grid-template-rows: 1fr;
+    gap: 0 0;
+    grid-template-areas:
+    "Frogs Start Level";
+    grid-area: game_footer;
+}
+
+#frogs, #level
+{
+    font-family: 'Fredoka One', cursive;
+    font-size: 131%;
+    border-top: 1px solid #4ee17a;
+}
+
+#game_over, #instructions, #level_complete
+{
+    font-variant: small-caps;
+    word-wrap: break-word;
+}
+
+#game_over
+{
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 300%;
+}
+
+#game_over, #frogs, #level
+{
+    padding-left: 3px;
+    padding-right: 3px;
+    color: brown;
+}
+
+#instructions
+{
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+}
+
+#instructions, #level_complete
+{
+    padding: 20px;
+    position: fixed;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 150%;
+	background-color: #4ee17a;
+    color: #154623;
+    line-height: 1.5;
+    border-radius: 12px;
+}
+
+#level_complete, #game_over
+{
+    display: none;
+}
+
+.frog, #start
+{
+    cursor: pointer;
+}
+
+.frog
+{
+    position: relative;
+    float: left;
+}
+
+.display_center
+{
+    /* we should remove this class when game start (for #game_content):*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#frogs
+{
+    grid-area: Frogs;
+}
+
+#start
+{
+    background-color: #2e8bd3;
+    border: 2px outset #2572ac;
+    grid-area: Start;
+    color: #08131b;
+    font-family: 'Fredoka One', cursive;
+    transition-property: background-color;
+    transition-duration: 1s;
+}
+
+#start:hover
+{
+    letter-spacing: 2px;
+    transition-property: letter-spacing;
+    transition-duration: 1s;
+}
+
+#start[disabled]
+{
+    background-color: #b4c3ce;
+    cursor: unset;
+}
+
+#level
+{
+    grid-area: Level;
+}
